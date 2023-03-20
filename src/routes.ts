@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import articleRouter from "./features/article/auth.routes";
 
 const router = Router() 
 
@@ -13,5 +14,7 @@ router.get("/", (
         data : []
     })
 });
+
+router.use(articleRouter);
 
 export default router
